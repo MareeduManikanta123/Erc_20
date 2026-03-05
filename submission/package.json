@@ -1,0 +1,23 @@
+{
+  "name": "token-faucet-submission",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "compile": "cross-env HARDHAT_DISABLE_TELEMETRY_PROMPT=true hardhat compile",
+    "test": "cross-env HARDHAT_DISABLE_TELEMETRY_PROMPT=true hardhat test",
+    "clean": "cross-env HARDHAT_DISABLE_TELEMETRY_PROMPT=true hardhat clean",
+    "deploy:sepolia": "cross-env HARDHAT_DISABLE_TELEMETRY_PROMPT=true hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "cross-env HARDHAT_DISABLE_TELEMETRY_PROMPT=true hardhat verify --network sepolia",
+    "preflight": "powershell -ExecutionPolicy Bypass -File ./scripts/preflight.ps1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "chai": "^4.5.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.17"
+  }
+}
